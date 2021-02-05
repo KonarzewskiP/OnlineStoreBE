@@ -14,8 +14,12 @@ public class PurchaseItem {
     private Long id;
     private Integer count;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne()
     @JoinColumn(name = "product_id")
     private Product product;
+
+    @ManyToOne()
+    @JoinColumn(name = "order_id")
+    private Order orderEntity;
 
 }
